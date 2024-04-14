@@ -2,16 +2,19 @@ import React from "react";
 
 //include images into your bundle
 import logo from "../../img/KM-2013-final-web.png";
+import background from "../../img/background.jpg"
 import Navbar from "./Navbar";
 import Jumbotron from "./Jumbotron";
+import Built from "./Built";
+
 
 //create your first component
 const Home = () => {
-/* 	const bodyStyle = {
-        backgroundImage: <img src={logo}/>, 
+	/* const bodyStyle = {
+        backgroundImage: `url(${background})`, 
 		backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-		height: "100vh", 
+		height: "100%", 
 	}; */
 	return (
 		<div className="text-center">
@@ -28,6 +31,7 @@ const Home = () => {
 				<img src={logo} className="img-fluid custom-logo-img"/>
 			</p>
 			<Jumbotron />
+			<Built />
 			<p>
 				Made by{" "}
 				<a href="http://www.kamelmat.com">Kamelmat</a>, with
