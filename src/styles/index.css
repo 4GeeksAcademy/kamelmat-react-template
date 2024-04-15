@@ -1,4 +1,10 @@
 
 .custom-logo-img{
-    width: 50%;
+    width: 40%;
 }
+body {
+	background-image: url("https://virtual-bg.com/wp-content/uploads/2020/06/star-wars-2-background-for-zoom-and-teams-1536x864.jpg");
+	background-size: "cover";
+	background-repeat: "no-repeat";
+    height: 100vh;
+};

@@ -2,7 +2,7 @@ import React from "react";
 
 const Jumbotron = () => {
     return(
-<div className="p-5 mb-4 bg-body-tertiary rounded-3">
+<div className="p-3 mb-4 bg-body-tertiary rounded-3">
       <div className="container-fluid py-5">
         <h1 className="display-5 fw-bold">Matias Kamelman</h1>
         <p className="col-md-12 fs-4 text-center" >I specialize in bringing together the magic of music and art creation and production with the corporative business necessities applied to a constant evolving environment. 
