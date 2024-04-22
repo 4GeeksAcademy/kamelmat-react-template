@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import Jumbotron from "./Jumbotron";
 import Built from "./Built";
 import Badges from "./Badges";
-
+import { Login } from "./Login";
 
 //create your first component
 
@@ -22,12 +22,13 @@ const Home = () => {
 			scroll2="Vids"
 			scroll3="contact"
 			/>
-			<p>
+		{/* 	<p>
 				<img src={logo} className="img-fluid custom-logo-img"/>
-			</p>
-			<Badges />
+			</p> */}
+			<Login />
+		{/* 	<Badges />
 			<Jumbotron />
-			<Built />
+			<Built /> */}
 			<p>
 				Made by{" "}
 				<a href="http://www.kamelmat.com">Kamelmat</a>, with
