@@ -6,7 +6,7 @@ export const Login = () => {
     const [password, setPassword] = useState('');
     const [checked, setChecked] = useState(false);
     const [viewPassword, setViewPassword] = useState(false);
-
+    const [type, setType] = useState('')
     const handleEmail = (event) => {
         console.log(event)
         setEmail(event.target.value)
@@ -20,23 +20,23 @@ export const Login = () => {
     const handleChecked = event => setChecked(event.target.checked);
 
     const handleViewPassword = () => setViewPassword(!viewPassword)
-   
+
     const handleReset = () => {
         setEmail('');
         setPassword('');
         setChecked(false);
-      };
+    };
 
-   const handleSubmit = (event) => {
-    event.preventDefault();
-    const dataToSend = {
-        email: email,
-        password: password,
-        accept: checked
-      }
-      console.log(dataToSend)
-    handleReset();
-   }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const dataToSend = {
+            email: email,
+            password: password,
+            accept: checked
+        }
+        console.log(dataToSend)
+        handleReset();
+    }
     return (
         <div className="container text-start">
             <form onSubmit={handleSubmit}>
@@ -56,6 +56,15 @@ export const Login = () => {
                         {viewPassword ? <i className="far fa-eye-slash"></i> : <i className="far fa-eye"></i>}
                     </span>
                 </div>
+                <div className="form-floating mb-3">
+                    <select class="form-select" aria-label="Default select example"
+                    value={type} onChange={event => setType(event.target.value)}>
+                        <option selected>Chose Role</option>
+                        <option value="1">User</option>
+                        <option value="2">Admin</option>
+                        <option value="3">Dev</option>
+                    </select>
+                </div>
                 <div className="mb-3 form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1"
                         checked={checked} onChange={handleChecked} />
@@ -63,9 +72,9 @@ export const Login = () => {
                 </div>
                 <button type="submit" className="btn btn-primary ms-3 mt-3">Submit</button>
                 <button type="reset" className="btn btn-secondary ms-3 mt-3"
-            onClick={handleReset}>
-            Cancel
-          </button>
+                    onClick={handleReset}>
+                    Cancel
+                </button>
             </form>
         </div>
     );

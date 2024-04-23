@@ -7,6 +7,7 @@ import Jumbotron from "./Jumbotron";
 import Built from "./Built";
 import Badges from "./Badges";
 import { Login } from "./Login";
+import { Signup } from "./Signup";
 
 //create your first component
 
@@ -25,7 +26,8 @@ const Home = () => {
 		{/* 	<p>
 				<img src={logo} className="img-fluid custom-logo-img"/>
 			</p> */}
-			<Login />
+			{/* <Login /> */}
+			<Signup />
 		{/* 	<Badges />
 			<Jumbotron />
 			<Built /> */}
